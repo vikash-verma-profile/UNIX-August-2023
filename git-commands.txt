@@ -1,0 +1,1 @@
+git init => it will initlize the git repository in the folder
