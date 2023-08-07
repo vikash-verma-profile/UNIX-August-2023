@@ -1,0 +1,23 @@
+Commands	Description
+k   Moves the cursor up one line.
+j   Moves the cursor down one line.
+h 	Moves the cursor to the left one-character position.
+l	Moves the cursor to the right one-character position.
+0	Positions cursor at beginning of line.
+$	Positions cursor at end of line.
+W	Positions cursor to the next word.
+B 	Positions cursor to previous work.
+(	Positions cursor to beginning of current sentence.
+)	Positions cursor to beginning of next sentence.
+H	Move to top of screen.
+nH	Moves to nth line from the top of the screen.
+M	Move to middle of screen.
+L	Move to bottom of screen.
+nL	Moves to nth line from the bottom of the screen.
+:wq	Save and quit
+:w	Save
+:q	Quit
+:w fname	Save as fname
+ZZ	Save and quit
+:q!	Quit discarding changes made
+:w!	Save (and write to non-writable file)
