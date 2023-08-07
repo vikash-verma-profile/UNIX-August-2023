@@ -73,3 +73,50 @@ Number2:=3;
 Number3:=Number1+Number2;
 DBMS_OUTPUT.PUT_LINE(Number3);
 END;
+
+
+=====================IMPLICIT CURSOR========
+
+
+
+DECLARE
+ total_rows number;
+Begin
+Update CUSTOMER
+ Set Salary=Salary+500 where ID=1;
+ if(sql%notfound) THEN
+  DBMS_OUTPUT.PUT_LINE('No CUstomer selected');
+ ELSIF(sql%found) THEN
+ total_rows:=sql%rowcount;
+ DBMS_OUTPUT.PUT_LINE(total_rows || ' Customers selected');
+ END IF;
+END;
+
+========================EXPLICIT CURSOR===========
+
+DECLARE
+    CID     CUSTOMER.ID%TYPE;
+    CNAME   CUSTOMER.NAME%TYPE;
+    CURSOR C_CUSTOMER IS
+    SELECT
+        ID,
+        NAME
+    FROM
+        CUSTOMER;
+
+BEGIN
+    OPEN C_CUSTOMER;
+    LOOP
+        FETCH C_CUSTOMER INTO
+            CID,
+            CNAME;
+        EXIT WHEN C_CUSTOMER%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(CID
+                             || ' '
+                             || CNAME);
+    END LOOP;
+
+    CLOSE C_CUSTOMER;
+END;
+
+
