@@ -1,0 +1,9 @@
+Steps for FreeStyle Project	
+
+1.Give any <Name> to the item
+2.Use FreeStyle Project.
+3. Add Git url in Source Code Management under that in Branches to build give your    master  branch name
+4.In Build Steps add Execute Windows batch command and write below instructions
+	javac HelloWorld.java
+	java HelloWorld
+5.CLick on apply
