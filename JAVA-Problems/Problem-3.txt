@@ -10,4 +10,4 @@ Finally create a PhotoBookTest class to perform the following actions:
 
 Create a default photo book and show the number of pages
 Create a photo book with 24 pages and show the number of pages
-Create a large photo book and show the number of pages
+Create a BigPhotoBook and show the number of pages
